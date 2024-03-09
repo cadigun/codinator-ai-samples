@@ -1,0 +1,20 @@
+## define the spec of code review guidelines on a repository
+project:
+  name: "codinator-ai-samples"
+  default_branch: "main"
+  files_types:
+  # define the file types that will be reviewed by Codinator
+    - ".go"
+    - ".java"
+  requirements:
+  # human readable requirements
+    - For variables and methods, stick to using camelCase, like localVariable or computeTotal.
+    - When naming classes and interfaces, go for PascalCase, such as CustomerService or PaymentGateway.
+    - Keep constants in uppercase with underscores separating words, for example, MAX_SIZE or DEFAULT_TIMEOUT.
+    - Instead of return codes, use exceptions to handle errors, and try to catch specific exceptions rather than the generic Exception.
+    - Please make sure to document the purpose, parameters, and return values of each method for clarity.
+    - When working with channels and goroutines, always close the channels and make sure the goroutines finish executing.
+    - Comment your code clearly, starting each comment with the name of the element you're describing.
+    - Use the built-in testing package for writing tests and name your test files with the _test.go suffix to follow conventions.
+    - It's a good habit to end each file with a newline.
+
